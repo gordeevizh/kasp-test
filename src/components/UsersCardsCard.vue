@@ -1,10 +1,9 @@
 <template>
-  <div class="UsersCardsCard">
-      <div>{{user.full_name}}</div>
-      <div>{{user.account}}</div>
-      <div>{{user.email}}</div>
-      <div>{{user.group}}</div>
-      <div>{{user.phone}}</div>
+  <div class="usersCardsCard">
+      <div class="usersCardsCard__name">{{user.full_name}}</div>
+      <div class="usersCardsCard__avatar"></div>
+      <div class="usersCardsCard__group">{{user.group}}</div>
+      <div class="usersCardsCard__phone">{{user.phone}}</div>
   </div>
 </template>
 
@@ -29,9 +28,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.UsersCardsCard {
-    padding: 1em;
-    width: 250px;
+.usersCardsCard {
+  background-color: #f5f5f5;
+  padding: 1em;
+  margin: 1em;
+  width: 250px;
+}
+.usersCardsCard__name {
+  font-weight: 600;
+}
+.usersCardsCard__avatar {
+  background: url('../assets/userAvatarDevault.png');
+  width: 165px;
+  height: 142px;
+  margin: auto;
+}
+.usersCardsCard__group, .usersCardsCard__phone, .usersCardsCard__name {
+  line-height: 2em;
 }
 h1, h2 {
   font-weight: normal;

@@ -2,7 +2,7 @@
   <div
     class="UsersViewSwitcher"
     @click="switchView"
-  >{{viewType}}</div>
+  >{{label}}</div>
 </template>
 
 <script>
@@ -17,6 +17,16 @@ export default {
   },
   data () {
     return {
+    }
+  },
+  computed: {
+    label () {
+      switch (this.viewType) {
+        case 'UsersTable': return 'Таблица'
+        case 'UsersCards': return 'Список карточек'
+        case 'UsersGroups': return 'По группам'
+      }
+      return ''
     }
   },
   methods: {
@@ -41,10 +51,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .UsersViewSwitcher {
+  cursor: pointer;
   display: block;
-  width: 50px;
-  height: 50px;
-  background: red;
+  width: 200px;
+  height: 3em;
+  background: #e9f1ef;
+  line-height: 3em;
+
 }
 h1, h2 {
   font-weight: normal;

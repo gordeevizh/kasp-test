@@ -1,10 +1,7 @@
 <template>
-  <div class="UsersGroupsGroupCard">
-      <div>{{user.full_name}}</div>
-      <div>{{user.account}}</div>
-      <div>{{user.email}}</div>
-      <div>{{user.group}}</div>
-      <div>{{user.phone}}</div>
+  <div class="usersGroupsGroupCard">
+      <div class="usersGroupsGroupCard__name">{{user.full_name}}</div>
+      <div class="usersGroupsGroupCard__group">{{user.group}}</div>
   </div>
 </template>
 
@@ -29,10 +26,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.UsersGroupsGroupCard {
-    padding: 1em;
-    width: 250px;
-    background: silver;
+.usersGroupsGroupCard {
+  padding: 1em;
+  border: 1px solid silver;
+  margin: 1em;
+}
+.usersGroupsGroupCard__name {
+  font-weight: 600;
+}
+.usersGroupsGroupCard__group, .usersGroupsGroupCard__name {
+  text-align: left;
 }
 h1, h2 {
   font-weight: normal;

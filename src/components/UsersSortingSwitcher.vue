@@ -1,21 +1,23 @@
 <template>
-  <select
-    name="select"
-    class="UserSortingSwitcher"
-    :value=value
-    @input="pleaseSort($event.target.value)"
-  >
-    <option value="1">По имени по возрастанию</option>
-    <option value="2">По имени по убыванию</option>
-    <option value="3">По учетной записи по возрастанию</option>
-    <option value="4">По учетной записи по убыванию</option>
-    <option value="5">По электронной почте по возрастанию</option>
-    <option value="6">По электронной почте по убыванию</option>
-    <option value="7">По группе по возрастанию</option>
-    <option value="8">По группе по убыванию</option>
-    <option value="9">По телефону по возрастанию</option>
-    <option value="10">По телефону по убыванию</option>
-  </select>
+  <div class="userSortingSwitcher">
+    <div>Отсортировать</div>
+    <select
+      name="select"
+      :value=value
+      @input="pleaseSort($event.target.value)"
+    >
+      <option value="1">По имени по возрастанию</option>
+      <option value="2">По имени по убыванию</option>
+      <option value="3">По учетной записи по возрастанию</option>
+      <option value="4">По учетной записи по убыванию</option>
+      <option value="5">По электронной почте по возрастанию</option>
+      <option value="6">По электронной почте по убыванию</option>
+      <option value="7">По группе по возрастанию</option>
+      <option value="8">По группе по убыванию</option>
+      <option value="9">По телефону по возрастанию</option>
+      <option value="10">По телефону по убыванию</option>
+    </select>
+  </div>
 </template>
 
 <script>
@@ -102,6 +104,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.userSortingSwitcher {
+  padding: 0 1em;
+}
 h1, h2 {
   font-weight: normal;
 }

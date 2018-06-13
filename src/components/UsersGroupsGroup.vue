@@ -1,5 +1,6 @@
 <template>
   <div class="UsersGroupsGroup">
+      <h3>{{usersGroup[0].group}}</h3>
       <UsersGroupsGroupCard
         v-for="user in usersGroup"
         :key="user.id"
@@ -34,9 +35,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .UsersGroupsGroup {
-    margin: 1em;
-    width: 300px;
-    background: gray;
+  margin: 1em;
+  width: 300px;
+  border: 1px solid silver;
 }
 h1, h2 {
   font-weight: normal;
